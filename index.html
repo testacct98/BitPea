@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BitPea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    
+<body>
+  <header class="flex justify-between items-center p-4 bg-opacity-30 bg-black">
+    <div class="logo-name">
+      <img src="logo.png" alt="BitPea Logo" class="w-14 h-14" />
+      <span>BitPea</span>
+    </div>
+    <button id="menu-toggle" class="sm:hidden block text-white text-3xl focus:outline-none">&#9776;</button>
+    <nav id="mobile-menu" class="hidden fixed top-0 right-0 w-2/3 h-full bg-black bg-opacity-95 text-white z-50 flex flex-col items-start p-6 space-y-4 text-xl"
+         style="background: linear-gradient(to bottom right, #6d28d9, #3b82f6); box-shadow: -4px 0 15px rgba(0,0,0,0.4);">
+      <button onclick="toggleMenu()" class="text-white text-2xl self-end">&times;</button>
+      <a href="#about" onclick="toggleMenu()" class="hover:bg-purple-500 px-4 py-2 rounded transition">About</a>
+      <a href="#how" onclick="toggleMenu()" class="hover:bg-purple-500 px-4 py-2 rounded transition">🛒 How to Buy</a>
+      <a href="#tokenomics" onclick="toggleMenu()" class="hover:bg-purple-500 px-4 py-2 rounded transition">📊 Tokenomics</a>
+      <a href="#roadmap" onclick="toggleMenu()" class="hover:bg-purple-500 px-4 py-2 rounded transition">🗺️ Roadmap</a>
+      <a href="#tale" onclick="toggleMenu()" class="hover:bg-purple-500 px-4 py-2 rounded transition">Tale</a>
+    </nav>
+    <nav class="hidden sm:flex space-x-4">
+      <a href="#about">About</a>
+      <a href="#how">🛒 How to Buy</a>
+      <a href="#tokenomics">📊 Tokenomics</a>
+      <a href="#roadmap">🗺️ Roadmap</a>
+      <a href="#tale">Tale</a>
+    </nav>
+  </header>
+
+  <section class="text-center py-20" id="home" data-aos="zoom-in">
+    <img src="logo.png" alt="BitPea Logo" class="mx-auto w-52 mb-6 animate-pulse float"/>
+    <h1 class="text-4xl font-bold mb-4">Cute. Round. Ridiculously Rich.</h1>
+    <div class="space-x-4">
+      <button onclick="toggleCA()" class="px-6 py-2 bg-yellow-400 text-black rounded-full">Buy Now</button>
+      <a href="https://x.com/ta_len_ted" target="_blank" class="px-6 py-2 bg-blue-500 rounded-full">Follow on X</a>
+    </div>
+    <div id="ca-section" class="toggle-section text-sm text-center mt-4">
+      <strong>CA:</strong> DsDAaXp6WHmbBUkeesAN1iMUwkUDmWUFE9GtQAxGpump
+    </div>
+  </section>
+<section class="py-12 text-center" data-aos="fade-up">
+  <img src="bitpea-top.png" alt="BitPea standing on coins" class="mx-auto max-w-md rounded-xl shadow-lg" />
+</section>
+
+
+  <section id="about" data-aos="fade-up" class="px-6 py-16 bg-purple-700 bg-opacity-30">
+    <h2 class="text-3xl font-bold mb-6 text-center">🎯 About BitPea</h2>
+    <p class="max-w-2xl mx-auto text-center">
+      From a forgotten crypto seed in the blockchain garden, BitPea sprouted into the cutest pump machine on Solana.
+      He may be small, round, and giggly—but this pea rolls with whales. 💸🌱
+    </p>
+  </section>
+
+  <section id="how" data-aos="fade-left" class="px-6 py-16 bg-gradient-to-r from-green-400 to-blue-500 bg-opacity-30">
+  <h2 class="text-3xl font-bold mb-6 text-center">🛒 🛒 How to Buy</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left text-lg">
+    <div class="bg-gradient-to-br from-purple-600 to-indigo-600 bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <strong>1. Install Phantom Wallet:</strong> Get it from the App Store or Google Play. It’s your gateway to the Solana blockchain.
+    </div>
+    <div class="bg-gradient-to-br from-blue-600 to-blue-400 bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <strong>2. Buy SOL:</strong> Purchase SOL on Binance, Coinbase, or any exchange and send it to your Phantom wallet.
+    </div>
+    <div class="bg-gradient-to-br from-green-500 to-teal-500 bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <strong>3. Visit pump.fun:</strong> This is where new Solana meme coins launch. Head over there.
+    </div>
+    <div class="bg-gradient-to-br from-yellow-500 to-orange-400 bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <strong>4. Search “BitPea”:</strong> Type “BitPea” into the pump.fun search bar and tap the little chubby pea icon.
+    </div>
+    <div class="bg-gradient-to-br from-pink-500 to-fuchsia-500 bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <strong>5. Click Buy:</strong> Approve the transaction and welcome to the pod! You’re now a BitPea holder.
+    </div>
+  </div>
+</section>
+
+  <section id="tokenomics" data-aos="fade-right" class="px-6 py-16 bg-pink-500 bg-opacity-30">
+    <h2 class="text-3xl font-bold mb-6 text-center">📊 Tokenomics</h2>
+    <div class="max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center" data-aos="fade-right">
+      <div class="bg-white bg-opacity-10 p-4 rounded-lg shadow-md hover:scale-105 transition">Total Supply<br/><strong>1,000,000,000</strong></div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-lg shadow-md hover:scale-105 transition">Tax<br/><strong>0%</strong></div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-lg shadow-md hover:scale-105 transition">LP Burned<br/><strong>Yes</strong></div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-lg shadow-md hover:scale-105 transition">Holders Rewarded<br/><strong>100% community-owned</strong></div>
+    </div>
+  </section>
+
+  <section id="roadmap" data-aos="fade-up" class="px-6 py-16 bg-yellow-400 bg-opacity-30 text-black">
+    <h2 class="text-3xl font-bold mb-6 text-center">🗺️ Roadmap</h2>
+    <ol class="max-w-2xl mx-auto list-decimal list-inside space-y-2">
+      <li>🌱 Sprout Phase – Launch, X page, memes</li>
+      <li>🌿 Growth Phase – 1k holders, trending</li>
+      <li>🥦 Harvest Phase – Surprise drops, games</li>
+      <li>🪴 Podverse Phase – BitPea NFTs, community lore, pod DAO vibes</li>
+    </ol>
+  </section>
+
+  <section id="tale" data-aos="zoom-in" class="px-6 py-16 bg-indigo-600 bg-opacity-30 text-center">
+    <h2 class="text-3xl font-bold mb-6">📖 Legendary Tale</h2>
+    <p class="text-lg max-w-2xl mx-auto leading-relaxed">
+      In the silent corners of the blockchain garden, BitPea cracked open the pod of destiny.
+      He didn’t ask to pump — the charts chose him. Now, round and radiant, he rolls across wallets,
+      <span class="text-yellow-300 font-semibold">bringing fortune</span> to those who <span class="text-pink-400 font-semibold">believe in the pea</span>.
+    </p>
+  </section>
+
+  
+<section class="py-12 text-center" data-aos="fade-up">
+  <img src="bitpea-bottom.png" alt="BitPea in golden pod" class="mx-auto max-w-md rounded-xl shadow-lg" />
+</section>
+
+<div class="footer">
+    © 2025 BitPea. All Rights Preserved.
+  </div>
+
+  <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
+    </body>
+    
+</html>
